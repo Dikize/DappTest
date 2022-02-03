@@ -1,0 +1,19 @@
+@import '../../../style/animation/cardGlassmorphe2';
+
+.ContainerTokenomics {
+    width: 100%;
+    height: auto;
+    background: url("../../../assets/bgTomic.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px -10px;
+
+    .ContainerTokenomicsCard {
+        flex-wrap: wrap!important;
+
+        .cardAnimCard {
+            @extend %cardGlassmorphe2;
+        }
+    }
+}

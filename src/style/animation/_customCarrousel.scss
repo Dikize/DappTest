@@ -1,0 +1,47 @@
+%contentCarrousel {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    margin-bottom: 200px;
+    
+    figure {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 176px;
+        height: 150px;
+        background: #000;
+        border: 1px solid #3b444b;
+        overflow: hidden;
+        padding: 0;
+
+        &.open {
+            width: 100%;
+            height: 100%;
+            padding: 2em;
+            transition-property: padding, width, height;
+            transition-duration: 1500ms;
+        }
+        
+        &:not(.open):hover img {
+            transform: scale(1.2);
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            transition: transform 300ms;
+        }
+    }
+    
+}
+
+
+//----------------------------------- () -----------------------------------//
+@media (max-width: 576px) {}
+
+//----------------------------------- () -----------------------------------//
+@media (max-width: 768px) {}

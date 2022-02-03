@@ -1,0 +1,73 @@
+@import '../../../style/animation/cardGlassmorphe';
+@import '../../../style/animation/customCarrousel';
+
+.containerAbout {
+    position: relative;
+    height: auto;
+    width: 100%;
+    background: url("../../../assets/onepiece/9.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    p {
+        width: 50%;
+        text-align: center;
+        color: black;
+        margin: auto;
+        line-height: 25px;
+        font-size: large;
+    }
+
+    .cardAbout {
+        @extend %cardGlassmorphe;
+    }
+
+    .containerCarrousel {
+        @extend %contentCarrousel;
+        .closeImage {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 4em;
+            height: 4em;
+            transform: scale(0);
+        }
+        
+        .closeImage.open {
+            transform: scale(1);
+            transition: transform 750ms 750ms;
+            cursor: pointer;
+        }
+    
+        .closeImage::before,
+        .closeImage::after {
+            content: '';
+            position: absolute;
+            top: 2em;
+            left: 2em;
+            transform-origin: 50% 50%;
+            border-radius: 5px;
+            width: 2px;
+            height: 2em;
+            background: white;
+        }
+        
+        .closeImage::before {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+        
+        .closeImage::after {
+            transform: translate(-50%, -50%) rotate(135deg);
+        }
+        
+        .closeImage:hover::before,
+        .closeImage:hover::after {
+            background: red;
+        }
+    }
+}

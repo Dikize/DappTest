@@ -1,0 +1,56 @@
+%cardGlassmorphe {
+    position: relative;
+    width: 790px;
+    height: auto;
+    margin-bottom: 302px !important;
+    background-color: rgba(250, 250, 250, 0.7);
+    box-shadow: 0 25 50px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+
+    i {
+        position: absolute;
+        background-color: #af43f1;
+        top: 50px;
+        left: -15px;
+        width: 270px;
+        height: 50px;
+        border-radius: 30px;
+        border-bottom-left-radius: 0;
+
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 15px;
+            height: 30px;
+            background: #8045c6;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            z-index: 2;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 15px;
+            height: 15px;
+            background: #af43f1;
+            z-index: 1;
+        }
+
+    }
+
+    .cardGlassmorphText {
+        margin-top: 54px;
+    }
+}
+
+@media (max-width: 833px) {
+    .cardFaq {
+        width: 95% !important;
+    }
+}

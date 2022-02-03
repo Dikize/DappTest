@@ -1,0 +1,13 @@
+@import '../../../style/animation/FireText';
+@import '../../../style/animation/card-header';
+
+.containerHeader {
+
+    .animationFireText {
+        @extend %FireText;
+    }
+
+    .containerHedearCard {
+        @extend %containerHedearCard;
+    }
+}

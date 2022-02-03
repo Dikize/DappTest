@@ -1,0 +1,227 @@
+%containerHedearCard {
+    width: 95%;
+    height: 350px;
+    position: relative;
+    max-width: 750px;
+    margin: auto;
+    background: #fff;
+    box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+    padding: 25px;
+    border-radius: 25px;
+    transition: all .3s;
+    background: url(../../assets/wall.jpg);
+    background-size: cover;
+    color: white;
+
+    &:hover {
+        transform: translateY(-20px);
+        // .wrapperHedearCard .contentHedearCard .containerImg {
+        //     transform: scale(1.1);
+
+        // }
+    }
+
+    .wrapperHedearCard {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        display: flex;
+        transition-property: transform, -webkit-transform;
+        box-sizing: content-box;
+
+        .contentHedearCard {
+            width: 750px;
+            opacity: 1;
+            transform: translate3d(0px, 0px, 0px);
+            transition-duration: 0ms;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            position: relative;
+
+            .containerImg {
+                width: 300px;
+                height: 270px;
+                flex-shrink: 0;
+                background-image: linear-gradient(147deg, #fe8a39 0%, #fd3838 74%);
+                box-shadow: 4px 13px 30px 1px rgba(252, 56, 56, 0.2);
+                border-radius: 20px;
+                transform: translateX(-160px);
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                    border-radius: 20px;
+                    transition: all 0.3s;
+                    transition-delay: 0s;
+                }
+            }
+
+            .cardText {
+                padding-right: 25px;
+
+                h1 {
+                    font-weight: 700;
+                    color: white;
+                    margin-bottom: 20px;
+                }
+
+                .containerHeaderIcon {
+                    display: flex;
+                    justify-content: space-around;
+                    flex-wrap: wrap;
+
+                    .headerIcon {
+                        position: relative;
+                        padding-top: 10px;
+                        background: radial-gradient(#f00, rgba(0, 0, 0, 0.5));
+                        background-blend-mode: multiply;
+                        width: 150px;
+                        height: 130px;
+                        border-radius: 31px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        animation: animateBgColorTextIcon 5s linear infinite;
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 80px;
+                            height: 80px;
+                            background: radial-gradient(rgba(255, 0, 0, 0.75)), transparent, transparent;
+                            border-radius: 50%;
+
+                        }
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 50px;
+                            height: 50px;
+                            background: radial-gradient(rgba(255, 0, 0, 0.75)), transparent, transparent;
+                            border-radius: 50%;
+
+                        }
+
+                        .icon {
+                            position: relative;
+                            width: 90px;
+                            height: 90px;
+                            z-index: 1;
+                            text-align: center;
+
+                            svg {
+                                stroke: #fff;
+                                stroke-width: 10px;
+                                filter: drop-shadow(0 20px 10px #000) blur(2px);
+
+                                path {
+                                    fill: transparent;
+                                }
+                            }
+                        }
+
+                        h2 {
+                            position: relative;
+                            color: #fff;
+                            font-size: x-large;
+                            font-weight: normal;
+                            display: inline-block;
+                            text-shadow: 0 10px 10px #000;
+                            box-shadow: 10px 0 0 #fff;
+                            // animation: textTyping 5s steps(7) infinite;
+                            overflow: hidden;
+                            
+                            &.twitter {
+                                animation: textTyping 5s steps(7) infinite;
+                            }
+                            
+                            &.telegram {
+                                animation: textTypingTelegram 5s steps(8) infinite;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes animateBgColorTextIcon {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+@keyframes textTyping {
+
+    0%,
+    90%,
+    100% {
+        width: 1px;
+    }
+
+    30%,
+    60% {
+        width: 70px;
+    }
+}
+@keyframes textTypingTelegram {
+
+    0%,
+    90%,
+    100% {
+        width: 1px;
+    }
+
+    30%,
+    60% {
+        width: 95px;
+    }
+}
+
+@media (max-width: 1180px) {
+    .containerHedearCard {
+        max-width: 680px!important;
+        min-height: 500px!important;
+        height: auto!important;
+        margin: 232px auto 0!important;
+
+        .wrapperHedearCard {
+            transform: translate3d(0, 0, 0)!important;
+
+            .contentHedearCard {
+                width: 630px!important;
+                flex-direction: column!important;
+
+                .containerImg {
+                    transform: translateY(-50%)!important;
+                    width: 90%!important;
+                }
+
+                .cardText {
+                    margin-top: -80px!important;
+                    text-align: center!important;
+                    padding: 0 30px!important;
+
+                }
+            }
+        }
+    }
+}
