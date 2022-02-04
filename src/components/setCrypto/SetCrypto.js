@@ -218,9 +218,9 @@ export default function SetCrypto() {
           <h1 className="text-xl font-semibold text-gray-700 text-center">
             Recent transactions
           </h1>
-          <p>
+          <div>
             <TxList txs={txs} />
-          </p>
+          </div>
         </div>
       </Grid>
     </Grid>
