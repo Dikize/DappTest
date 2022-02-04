@@ -14,20 +14,12 @@ import logogecko from "../../assets/logo/gecko.svg"
 
 export default function SetCrypto() {
   const [txs, setTxs] = useState([]);
-  const [contractListened, setContractListened] = useState();
-  const [contractInfo, setContractInfo] = useState({
-    address: "-",
-    tokenName: "-",
-    tokenSymbol: "-",
-    totalSupply: "-"
-  });
-  const [balanceInfo, setBalanceInfo] = useState({
-    address: "-",
-    balance: "-"
-  });
+  // const [contractListened, setContractListened] = useState();
+  const [contractInfo, setContractInfo] = useState({ address: "-", tokenName: "-", tokenSymbol: "-", totalSupply: "-" });
+  const [balanceInfo, setBalanceInfo] = useState({ address: "-", balance: "-" });
 
   useEffect(() => {
-    function setContrac() {
+    const setContrac = () => {
       if (contractInfo.address !== "-") {
         const provider = new ethers.providers.Web3Provider(window.ethereum);
         const erc20 = new ethers.Contract(
@@ -49,11 +41,11 @@ export default function SetCrypto() {
             }
           ]);
         });
-        setContractListened(erc20);
+        // setContractListened(erc20);
   
-        return () => {
-          contractListened.removeAllListeners();
-        };
+        // return () => {
+        //   contractListened.removeAllListeners();
+        // };
       }
     }
     setContrac()

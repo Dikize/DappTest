@@ -45,7 +45,7 @@ export default function Footer() {
                     <feDisplacementMap in="SourceGraphic" scale="30" />
                 </filter>
             </svg>
-            <div class="footer-copyrightLogo col-4 d-flex flex-column justify-content-center w-100 text-center">
+            <div className="footer-copyrightLogo col-4 d-flex flex-column justify-content-center w-100 text-center">
                 <p className="logo-text">
                     <img src="./assets/img/onepiece/12.jpg" alt="Onepiece" style={{width:'300px',borderRadius:'16px'}} />
                 </p>
