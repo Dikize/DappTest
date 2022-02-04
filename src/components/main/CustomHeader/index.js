@@ -7,7 +7,7 @@ import logo from "../../../assets/logo/logo.jpg"
 const CustomHeader = () => {
 
     return (
-        <Grid container className={`${classes.containerHeader} h-auto`}>
+        <Grid container className={`${classes.containerHeader} h-auto py-4`}>
             <Grid item xs={12} className={`${classes.animationFireText}`}>
                 <div className={`${classes.text}`}>
                     <h1>Meta One Piece</h1>
@@ -23,7 +23,7 @@ const CustomHeader = () => {
                 </svg>
             </Grid>
 
-            <Grid container item className={`${classes.containerHedearCard}`} xs={12}>
+            <Grid container className={`${classes.containerHedearCard}`}>
                 <Grid item className={`${classes.wrapperHedearCard}`} xs={6}> 
                     <div className={`${classes.contentHedearCard}`}>
                         <div className={`${classes.containerImg}`}><img src={logo} alt="" /></div>

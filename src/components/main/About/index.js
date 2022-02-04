@@ -17,8 +17,8 @@ import img12 from "../../../assets/onepiece/12.jpg"
 const About = () => {
 
     return (
-        <Grid container className={`${classes.containerAbout}`}>
-            <Grid item className={`${classes.cardAbout} p-3 mx-auto`}>
+        <Grid container className={`${classes.containerAbout} py-4`}>
+            <Grid item className={`${classes.cardAbout} mb-3 p-3 mx-auto`}>
                 <i>
                     <h4 className={`text-center mt-2 text-white`}>META ONE PIECE</h4>
                 </i>
@@ -31,8 +31,8 @@ const About = () => {
                 </div>
             </Grid>
 
-            <Grid container item className={`${classes.containerCarrousel}`} xs={12}>
-                <div class={`${classes.contentCarrousel}`}>
+            <Grid container className={`${classes.containerCarrousel}`}>
+                <div className={`${classes.contentCarrousel}`}>
                     <figure><img src={img1} alt="Alan Walker - The Spectre" /></figure>
                     <figure><img src={img2} alt="Alan Walker - Alone" /> </figure>
                     <figure><img src={img3} alt="OM TELOLET OM - ALAN WALKER" /></figure>
@@ -44,7 +44,7 @@ const About = () => {
                     <figure><img src={img9} alt="alone GIF by Alan Walker Official" /></figure>
                     <figure><img src={img12} alt="sing me to sleep GIF by Alan Walker Official" /></figure>
                 </div>
-                <div class="closeImage"></div>
+                <div className="closeImage"></div>
             </Grid>
         </Grid>
     )

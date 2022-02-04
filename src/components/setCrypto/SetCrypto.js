@@ -27,34 +27,39 @@ export default function SetCrypto() {
   });
 
   useEffect(() => {
-    if (contractInfo.address !== "-") {
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
-      const erc20 = new ethers.Contract(
-        contractInfo.address,
-        erc20abi,
-        provider
-      );
-
-      erc20.on("Transfer", (from, to, amount, event) => {
-        console.log({ from, to, amount, event });
-
-        setTxs((currentTxs) => [
-          ...currentTxs,
-          {
-            txHash: event.transactionHash,
-            from,
-            to,
-            amount: String(amount)
-          }
-        ]);
-      });
-      setContractListened(erc20);
-
-      return () => {
-        contractListened.removeAllListeners();
-      };
+    function setContrac() {
+      if (contractInfo.address !== "-") {
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
+        const erc20 = new ethers.Contract(
+          contractInfo.address,
+          erc20abi,
+          provider
+        );
+  
+        erc20.on("Transfer", (from, to, amount, event) => {
+          console.log({ from, to, amount, event });
+  
+          setTxs((currentTxs) => [
+            ...currentTxs,
+            {
+              txHash: event.transactionHash,
+              from,
+              to,
+              amount: String(amount)
+            }
+          ]);
+        });
+        setContractListened(erc20);
+  
+        return () => {
+          contractListened.removeAllListeners();
+        };
+      }
     }
+    setContrac()
+
   }, [contractInfo.address]);
+  // }, [contractInfo.address]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -100,7 +105,7 @@ export default function SetCrypto() {
   };
 
   return (
-    <Grid container direction="column" className={`${styles.containerSetCrypto}`}>
+    <Grid container direction="column" className={`${styles.containerSetCrypto} py-4`}>
       <Grid container direction="row" justifyContent="space-around" alignItems="center" className={`${styles.containerLogoSetCrypto}`}>
         <Grid item xs={2} className={`${styles.logoSetCrypto}`}><a href="https://bscscan.com/address/0xf571453e4fa3933aa92a3cab1323969cc94b62a0" target="_blank"  rel="noreferrer" className=""><img src={logobsc} loading="lazy" alt="" className="" /></a></Grid>
         <Grid item xs={2} className={`${styles.logoSetCrypto}`}><a href="https://pancakeswap.finance/swap?outputCurrency=0xf571453e4fa3933aa92a3cab1323969cc94b62a0" target="_blank"  rel="noreferrer" className=""><img src={logocoin} loading="lazy" alt="" className="" /></a></Grid>

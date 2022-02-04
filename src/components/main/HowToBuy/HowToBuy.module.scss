@@ -1,0 +1,85 @@
+@import '../../../style/animation/boxWavyEffect';
+
+.containerHowToBuy {
+    min-height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background: #111;
+    background-color: #0e1538;
+    flex-direction: column;
+    position: relative;
+
+    .containerHowToBuyCard {
+        width: 100%;
+        height: auto;
+        margin-top: 97px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        .containerCardWavyEffect {
+            width: 350px;
+
+            .cardWavyEffect {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .box {
+                    @extend %boxWavyEffect;
+                    width: 300px;
+                    height: 400px;
+                    color: #fff;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &:hover {
+                        color: #000
+                    }
+
+                    &:hover::before {
+                        background: #283ba1;
+                        transition: 0.5s;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 768px) {
+    .containerHowToBuyCard .containerCardWavyEffect {
+        margin: 20px 0;
+        @extend %box-CardAnimation;
+
+        svg {
+            display: none
+        }
+
+        .cardWavyEffect .box {
+            h2 a {
+                color: #fff
+            }
+
+            &::before,
+            &::after {
+                background: transparent !important;
+                width: 0 !important;
+                border: none !important;
+                filter: none !important;
+            }
+
+            &:hover {
+                color: white !important;
+            }
+
+            &:hover::before {
+                background: rgba(0, 0, 0, 0.5) !important;
+            }
+        }
+    }
+}

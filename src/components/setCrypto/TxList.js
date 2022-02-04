@@ -5,12 +5,10 @@ export default function TxList({ txs }) {
             {txs.map((item) => (
                 <div key={item.txHash} className="alert-info mt-5 rounded-xl py-2 px-4">
                     <div>
-                    <p>From: {item.from}</p>
-                    <p>To: {item.to}</p>
-                    <p>Amount: {item.amount}</p>
-                    <a href={`https://rinkeby.etherscan.io/tx/${item.txHash}`}>
-                        Check in block explorer
-                    </a>
+                        <p>From: {item.from}</p>
+                        <p>To: {item.to}</p>
+                        <p>Amount: {item.amount}</p>
+                        <a href={`https://bscscan.com/tx/${item.txHash}`} target="_blank" rel="noreferrer">Check in block explorer</a>
                     </div>
                 </div>
             ))}

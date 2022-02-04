@@ -15,7 +15,7 @@ const Tokenomics = () => {
                 <h1 className="text-center mt-5"> Section 1</h1>
             </Grid>
 
-            <Grid container className={`${classes.ContainerTokenomicsCard}`} justifyContent="space-evenly" xs={12}>
+            <Grid container className={`${classes.ContainerTokenomicsCard}`} justifyContent="space-evenly">
                 <div className={`${classes.cardAnimCard}`}>
                     <div className={`${classes.icon}`}>
                         <img src={TOKEN} alt="" />

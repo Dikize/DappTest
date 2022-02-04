@@ -1,0 +1,30 @@
+@import '../../../style/animation/animateTextGlowing';
+@import '../../../style/animation/cardRoadmap';
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+
+.containerRoadmap {
+    background-color: #000;
+    color: #fff;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    perspective: 600px * 20;
+    font-family: Raleway, sans-serif;
+
+    width: 100%;
+    height: auto;
+    background: url("../../../assets/onepiece/1.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    // h1 {
+    //     // @extend %animateTextGlowing;
+    // }
+
+    .cardRoadmap {
+        @extend %cardRoadmap;
+    }
+}
