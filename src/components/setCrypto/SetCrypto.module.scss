@@ -21,6 +21,7 @@
     }
 
     .containerFormSetCrypto {
+        width: 50%!important;
         background: rgba(255,255,255,0.05)!important;
         color: white!important;
         margin-top: 30px;
@@ -32,4 +33,20 @@
 
     }
 
+}
+
+@media (max-width: 768px)  {
+    .containerSetCrypto {
+        .containerFormSetCrypto {
+            width: 90%!important;
+        }
+    }
+}
+
+@media (max-width: 568px)  {
+    .containerSetCrypto {
+        .containerFormSetCrypto {
+            width: 100%!important;
+        }
+    }
 }

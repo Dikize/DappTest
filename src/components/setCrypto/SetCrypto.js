@@ -106,7 +106,7 @@ export default function SetCrypto() {
         <Grid item xs={2} className={`${styles.logoSetCrypto}`}><a href="https://poocoin.app/tokens/0xf571453e4fa3933aa92a3cab1323969cc94b62a0" target="_blank"  rel="noreferrer" className=""><img src={logopcs} loading="lazy" alt="" className="" /></a></Grid>
       </Grid>
 
-      <Grid container direction="column" className={`${styles.containerFormSetCrypto} shadow-lg w-50 mx-auto`}>
+      <Grid container direction="column" className={`${styles.containerFormSetCrypto} shadow-lg mx-auto`}>
         <form className={`${styles.formReadCrypto}`} onSubmit={handleSubmit}>
           <div className="mx-auto">
             <main className="">
