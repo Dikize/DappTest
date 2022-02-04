@@ -2,16 +2,17 @@
     height: auto;
     position: relative;
 
-    
+
     .containerLogoSetCrypto {
         .logoSetCrypto {
-            width: 50px;
+            width: 120px;
             height: 50px;
-        
+            margin: 10px;
+
             a {
                 width: 100%;
                 height: 100%;
-        
+
                 img {
                     width: 100%;
                     height: 100%;
@@ -21,12 +22,12 @@
     }
 
     .containerFormSetCrypto {
-        width: 50%!important;
-        background: rgba(255,255,255,0.05)!important;
-        color: white!important;
+        width: 50% !important;
+        background: rgba(255, 255, 255, 0.05) !important;
+        color: white !important;
         margin-top: 30px;
         border-radius: 10px;
-        
+
         .formReadCrypto {
             height: 460px;
         }
@@ -35,18 +36,18 @@
 
 }
 
-@media (max-width: 768px)  {
+@media (max-width: 768px) {
     .containerSetCrypto {
         .containerFormSetCrypto {
-            width: 90%!important;
+            width: 90% !important;
         }
     }
 }
 
-@media (max-width: 568px)  {
+@media (max-width: 568px) {
     .containerSetCrypto {
         .containerFormSetCrypto {
-            width: 100%!important;
+            width: 100% !important;
         }
     }
 }

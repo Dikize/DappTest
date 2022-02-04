@@ -16,7 +16,7 @@ const Homepage = () => {
             <Grid container direction="row" justifyContent="space-evenly" alignItems="center" className="pb-2">
                 {/* <Grid item className="pb-2 border mx-auto" xs={12} sm={10} md={8} lg={6} >  */}
 
-                <Grid item id="CustomHeader" className="mx-auto text-center" xs={12} style={{width:'48px',height:'500px'}}> 
+                <Grid item id="CustomHeader" className="mx-auto text-center" xs={12}> 
                     <CustomHeader />
                 </Grid>
 

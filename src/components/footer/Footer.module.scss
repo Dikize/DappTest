@@ -8,17 +8,30 @@
     height: 500px;
     color: #fff;
 
-    .container-iconFooter {
+    .containerIconFooter {
         position: relative;
         width: 100%;
+        height: auto;
         justify-content: space-evenly;
         z-index: 9999;
-        height: 100px;
+        display: flex;
+        flex-wrap: wrap;
         // @extend %icons;
-    }
-    svg{display:none;}
 
-    .footer-copyrightLogo {
+        .footerIcon {
+            width: 20%;
+            transition: 1s;
+            &:hover {
+                transform: translateY(-20px);
+            }
+        }
+    }
+
+    .AnimationSvg {
+        display: none;
+    }
+
+    .footerCopyrightLogo {
         position: relative;
         z-index: 9999;
     }
@@ -26,18 +39,25 @@
 
 @media (max-width: 768px) {
     .containerFooter {
-        padding-bottom: 0!important;
-        height: auto!important;
-        svg {
+        padding-bottom: 0 !important;
+        height: auto !important;
+
+        .AnimationSvg {
             display: none
         }
+
         // @extend %box-CardAnimation;
-        
-        &::before, &::after {
-            background: transparent!important;
-            width: 0!important;
-            border: none!important;
-            filter: none!important;
+
+        .containerIconFooter {
+            margin-bottom: 30px;
+        }
+
+        &::before,
+        &::after {
+            background: transparent !important;
+            width: 0 !important;
+            border: none !important;
+            filter: none !important;
         }
     }
 }

@@ -48,7 +48,7 @@ const Navbar = () => {
                     setnav(!nav);
                 }}
                 >
-                PRESS ME
+                Menu
                 </button>
             </div>
 

@@ -6,11 +6,11 @@ import styles from "./SetCrypto.module.scss"
 // import erc20abi from "./ERC20abi.json";
 import erc20abi from "./BEP20abi.json";
 import TxList from "./TxList";
-import logobsc from "../../assets/logo/bsc.svg"
-import logocoin from "../../assets/logo/coin.svg"
-import logobinance from "../../assets/logo/binance.png"
-import logopcs from "../../assets/logo/pcs.png"
-import logogecko from "../../assets/logo/gecko.svg"
+import logoBsc from "../../assets/logo/bsc.svg"
+import logoCoin from "../../assets/logo/coin.svg"
+import logobinance from "../../assets/logo/binance.svg"
+import logoPancakeSwap from "../../assets/logo/PancakeSwap.svg"
+import logoGecko from "../../assets/logo/gecko.svg"
 
 export default function SetCrypto() {
   const [txs, setTxs] = useState([]);
@@ -99,11 +99,11 @@ export default function SetCrypto() {
   return (
     <Grid container direction="column" className={`${styles.containerSetCrypto} py-4`}>
       <Grid container direction="row" justifyContent="space-around" alignItems="center" className={`${styles.containerLogoSetCrypto}`}>
-        <Grid item xs={2} className={`${styles.logoSetCrypto}`}><a href="https://bscscan.com/address/0xf571453e4fa3933aa92a3cab1323969cc94b62a0" target="_blank"  rel="noreferrer" className=""><img src={logobsc} loading="lazy" alt="" className="" /></a></Grid>
-        <Grid item xs={2} className={`${styles.logoSetCrypto}`}><a href="https://pancakeswap.finance/swap?outputCurrency=0xf571453e4fa3933aa92a3cab1323969cc94b62a0" target="_blank"  rel="noreferrer" className=""><img src={logocoin} loading="lazy" alt="" className="" /></a></Grid>
-        <Grid item xs={2} className={`${styles.logoSetCrypto}`}><a href="https://www.coingecko.com/" target="_blank"  rel="noreferrer" className=""><img src={logogecko} loading="lazy" alt="" className="" /></a></Grid>
-        <Grid item xs={2} className={`${styles.logoSetCrypto}`}><a href="https://academy.binance.com/en/articles/connecting-metamask-to-binance-smart-chain" target="_blank"  rel="noreferrer" className=""><img src={logobinance} loading="lazy" alt="" className="" /></a></Grid>
-        <Grid item xs={2} className={`${styles.logoSetCrypto}`}><a href="https://poocoin.app/tokens/0xf571453e4fa3933aa92a3cab1323969cc94b62a0" target="_blank"  rel="noreferrer" className=""><img src={logopcs} loading="lazy" alt="" className="" /></a></Grid>
+        <Grid item className={`${styles.logoSetCrypto}`}><a href="https://bscscan.com/address/0xf571453e4fa3933aa92a3cab1323969cc94b62a0" target="_blank"  rel="noreferrer" className=""><img src={logoBsc} loading="lazy" alt="" className="" /></a></Grid>
+        <Grid item className={`${styles.logoSetCrypto}`}><a href="https://pancakeswap.finance/swap?outputCurrency=0xf571453e4fa3933aa92a3cab1323969cc94b62a0" target="_blank"  rel="noreferrer" className=""><img src={logoCoin} loading="lazy" alt="" className="" /></a></Grid>
+        <Grid item className={`${styles.logoSetCrypto}`}><a href="https://www.coingecko.com/" target="_blank"  rel="noreferrer" className=""><img src={logoGecko} loading="lazy" alt="" className="" /></a></Grid>
+        <Grid item className={`${styles.logoSetCrypto}`}><a href="https://academy.binance.com/en/articles/connecting-metamask-to-binance-smart-chain" target="_blank"  rel="noreferrer" className=""><img src={logobinance} loading="lazy" alt="" className="" /></a></Grid>
+        <Grid item className={`${styles.logoSetCrypto}`}><a href="https://poocoin.app/tokens/0xf571453e4fa3933aa92a3cab1323969cc94b62a0" target="_blank"  rel="noreferrer" className=""><img src={logoPancakeSwap} loading="lazy" alt="" className="" /></a></Grid>
       </Grid>
 
       <Grid container direction="column" className={`${styles.containerFormSetCrypto} shadow-lg mx-auto`}>

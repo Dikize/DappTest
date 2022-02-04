@@ -50,7 +50,10 @@
 }
 
 @media (max-width: 833px) {
-    .cardFaq {
+    %cardGlassmorphe {
         width: 95% !important;
+        .cardFaq {
+            width: 95% !important;
+        }
     }
 }
