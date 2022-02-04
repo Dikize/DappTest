@@ -71,3 +71,9 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .containerAbout {
+        background-size: initial;
+    }
+}
