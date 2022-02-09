@@ -20,6 +20,7 @@
 
         .footerIcon {
             width: 20%;
+            margin: 10px 20px;
             transition: 1s;
             &:hover {
                 transform: translateY(-20px);
@@ -40,24 +41,32 @@
 @media (max-width: 768px) {
     .containerFooter {
         padding-bottom: 0 !important;
-        height: auto !important;
+        // height: auto !important;
 
-        .AnimationSvg {
-            display: none
-        }
+        // .AnimationSvg {
+        //     display: none
+        // }
 
         // @extend %box-CardAnimation;
 
         .containerIconFooter {
-            margin-bottom: 30px;
+            margin-bottom: 0;
         }
 
-        &::before,
-        &::after {
-            background: transparent !important;
-            width: 0 !important;
-            border: none !important;
-            filter: none !important;
+        // &::before,
+        // &::after {
+        //     background: transparent !important;
+        //     width: 0 !important;
+        //     border: none !important;
+        //     filter: none !important;
+        // }
+        .footerCopyrightLogo {
+            p {
+                margin-bottom: 25px;
+            }
+            h4 {
+                margin-top: -17px;
+            }            
         }
     }
 }

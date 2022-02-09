@@ -77,6 +77,7 @@
 
                     .headerIcon {
                         position: relative;
+                        margin: 20px 0;
                         padding-top: 10px;
                         background: radial-gradient(#f00, rgba(0, 0, 0, 0.5));
                         background-blend-mode: multiply;
@@ -202,6 +203,34 @@
         min-height: 500px!important;
         height: auto!important;
         margin: 232px auto 0!important;
+
+        .wrapperHedearCard {
+            width: 90% !important;
+            margin: auto;
+            transform: translate3d(0, 0, 0)!important;
+
+            .contentHedearCard {
+                width: 630px!important;
+                flex-direction: column!important;
+
+                .containerImg {
+                    transform: translateY(-50%)!important;
+                    width: 90%!important;
+                }
+
+                .cardText {
+                    margin-top: -80px!important;
+                    text-align: center!important;
+                    padding: 0 30px!important;
+
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1180px) {
+    .containerHedearCard {
 
         .wrapperHedearCard {
             width: 90% !important;
